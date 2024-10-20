@@ -9,7 +9,9 @@ export class UserService {
   private redisService: RedisService;
 
   async register(registerUserDto: RegisterUserDto) {
-    const { username } = registerUserDto;
+    const { username, password } = registerUserDto;
+
+    console.log(typeof password);
     const notes = await this.redisService.hashGet(username);
 
     return notes;

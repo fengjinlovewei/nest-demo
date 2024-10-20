@@ -1,0 +1,259 @@
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/user}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/:id, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/user}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/:id, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/user}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/:id, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/user}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/:id, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/user}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/:id, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/user}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/:id, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/user}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/:id, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/user}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/:id, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/user}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/:id, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/user}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/:id, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/user}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/:id, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/user}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/:id, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/user}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/:id, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/user}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/:id, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/user}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/:id, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/user}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/:id, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/user}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/:id, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/user}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/:id, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/user}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/:id, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/user}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/:id, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"InvokeRecordInterceptor","level":"debug","message":"POST /user/register ::1 PostmanRuntime/7.42.0: UserController register invoked..."}
+{"context":"InvokeRecordInterceptor","level":"debug","message":"POST /user/register ::1 PostmanRuntime/7.42.0: 201: 12ms"}
+{"context":"InvokeRecordInterceptor","level":"debug","message":"Response: {\"1702459188837\":\"{\\\"title\\\":\\\"ea molestias\\\",\\\"content\\\":\\\"et iusto sed quo iurewwwwww111\\\",\\\"updateTime\\\":\\\"2024-10-13T11:16:10.033Z\\\"}\",\"1702459182837\":\"{\\\"title\\\":\\\"qui est\\\",\\\"content\\\":\\\"est rerum tempore vitae sequi sint\\\",\\\"updateTime\\\":\\\"2023-12-13T09:19:48.837Z\\\"}\",\"1728822625083\":\"{\\\"title\\\":\\\"Untitled111\\\",\\\"content\\\":\\\"```\\\\r\\\\nconst MaShanZheng = Ma_Shan_Zheng({\\\\r\\\\n  subsets: ['latin'],\\\\r\\\\n});\\\\r\\\\n```\\\",\\\"updateTime\\\":\\\"2024-10-18T08:46:39.467Z\\\"}\",\"1729210295244\":\"{\\\"title\\\":\\\"请问请问\\\",\\\"content\\\":\\\"请问请问请问请问请问 驱蚊器卫栖梧请问请问请问请问\\\",\\\"updateTime\\\":\\\"2024-10-18T00:11:35.243Z\\\"}\"}"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/user}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/:id, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/user}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/:id, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"InvokeRecordInterceptor","level":"debug","message":"POST /user/register ::1 PostmanRuntime/7.42.0: UserController register invoked..."}
+{"context":"UserController","isBool":true,"level":"info","password":"123456","type":1,"username":"notes"}
+{"context":"InvokeRecordInterceptor","level":"debug","message":"POST /user/register ::1 PostmanRuntime/7.42.0: 201: 11ms"}
+{"context":"InvokeRecordInterceptor","level":"debug","message":"Response: {\"1702459188837\":\"{\\\"title\\\":\\\"ea molestias\\\",\\\"content\\\":\\\"et iusto sed quo iurewwwwww111\\\",\\\"updateTime\\\":\\\"2024-10-13T11:16:10.033Z\\\"}\",\"1702459182837\":\"{\\\"title\\\":\\\"qui est\\\",\\\"content\\\":\\\"est rerum tempore vitae sequi sint\\\",\\\"updateTime\\\":\\\"2023-12-13T09:19:48.837Z\\\"}\",\"1728822625083\":\"{\\\"title\\\":\\\"Untitled111\\\",\\\"content\\\":\\\"```\\\\r\\\\nconst MaShanZheng = Ma_Shan_Zheng({\\\\r\\\\n  subsets: ['latin'],\\\\r\\\\n});\\\\r\\\\n```\\\",\\\"updateTime\\\":\\\"2024-10-18T08:46:39.467Z\\\"}\",\"1729210295244\":\"{\\\"title\\\":\\\"请问请问\\\",\\\"content\\\":\\\"请问请问请问请问请问 驱蚊器卫栖梧请问请问请问请问\\\",\\\"updateTime\\\":\\\"2024-10-18T00:11:35.243Z\\\"}\"}"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/user}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/:id, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/user}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/:id, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/user}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/:id, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/user}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/:id, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/user}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/:id, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/user}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/:id, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/user}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/:id, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/user}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/:id, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/user}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/:id, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/user}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/:id, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/user}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/:id, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/user}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/:id, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/user}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/:id, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/user}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/:id, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/user}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/:id, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/user}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/:id, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/user}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/:id, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/user}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/:id, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/user}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/:id, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/user}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/register, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/user/:id, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
