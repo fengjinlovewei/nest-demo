@@ -17,8 +17,8 @@ export class UserController {
     return this.userService.register(registerUserDto);
   }
 
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.userService.findOne(+id);
+  @Get('weather/:city')
+  weather(@Param('city') city: string) {
+    return this.userService.weather(city);
   }
 }

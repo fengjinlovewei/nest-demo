@@ -8,17 +8,32 @@ import { UserModule } from './user/user.module';
 import * as winston from 'winston';
 import { WinstonLogger, WinstonModule, utilities } from 'nest-winston';
 
+//import { HttpModule } from '@nestjs/axios';
+
 import { ConfigModule, ConfigService } from '@nestjs/config';
+import { HttpModule } from './http/http.module';
 
 @Module({
   imports: [
     RedisModule,
+    HttpModule,
     SessionModule,
     UserModule,
     ConfigModule.forRoot({
       isGlobal: true,
       envFilePath: 'src/.env',
     }),
+    // HttpModule.registerAsync({
+    //   imports: [ConfigModule],
+    //   useFactory: async (configService: ConfigService) => {
+    //     return {
+    //       timeout: configService.get('HTTP_TIMEOUT'),
+    //       baseURL: configService.get('HTTP_BASE_URL'),
+    //       // maxRedirects: configService.get('HTTP_MAX_REDIRECTS'),
+    //     };
+    //   },
+    //   inject: [ConfigService],
+    // }),
     WinstonModule.forRootAsync({
       useFactory: (configService: ConfigService) => {
         return {
