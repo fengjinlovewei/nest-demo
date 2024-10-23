@@ -1,6 +1,16 @@
-import { Controller, Post, Get, Body, Param, Logger } from '@nestjs/common';
+import {
+  Controller,
+  Post,
+  Get,
+  Body,
+  Param,
+  Logger,
+  Req,
+  Res,
+} from '@nestjs/common';
+
 import { UserService } from './user.service';
-import { RegisterUserDto } from './dto/register-user.dto';
+import type { RegisterUserDto } from './dto/register-user.dto';
 
 @Controller('user')
 export class UserController {
@@ -10,15 +20,21 @@ export class UserController {
 
   @Post('register')
   register(@Body() registerUserDto: RegisterUserDto) {
-    // this.logger.log('ccc', AppController.name);
-
-    this.logger.log(registerUserDto);
-
     return this.userService.register(registerUserDto);
   }
 
+  @Get('header')
+  header(@Req() req: Request, @Res({ passthrough: true }) res: Response) {
+    // console.log(req.headers);
+    // console.log(req.XHeaderId);
+    // console.log(req.cookies);
+    res.header('x-test-header', '5173');
+
+    return { name: 'fdy' };
+  }
+
   @Get('weather/:city')
-  weather(@Param('city') city: string) {
-    return this.userService.weather(city);
+  weather(@Req() req: Request, @Param('city') city: string) {
+    return this.userService.weather(city, req.XHeaderId);
   }
 }

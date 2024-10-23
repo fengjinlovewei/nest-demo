@@ -5,9 +5,9 @@ import {
   Logger,
   NestInterceptor,
 } from '@nestjs/common';
-import { Response } from 'express';
-import { Request } from 'express';
 import { Observable, tap } from 'rxjs';
+
+import { uuid, getJsonLog } from './utils';
 
 @Injectable()
 export class InvokeRecordInterceptor implements NestInterceptor {
@@ -20,26 +20,49 @@ export class InvokeRecordInterceptor implements NestInterceptor {
     const request = context.switchToHttp().getRequest<Request>();
     const response = context.switchToHttp().getResponse<Response>();
 
+    const XHeaderId = uuid();
+
+    request.XHeaderId = XHeaderId;
+
     const userAgent = request.headers['user-agent'];
 
-    const { ip, method, path } = request;
+    const { ip, method, path, params, body } = request;
 
     this.logger.debug(
-      `${method} ${path} ${ip} ${userAgent}: ${context.getClass().name} ${
-        context.getHandler().name
-      } invoked...`,
+      getJsonLog({
+        '[REQ:BFF]': '',
+        XHeaderId,
+        method,
+        path,
+        params,
+        body,
+        ip,
+        userAgent,
+        className: context.getClass().name,
+        handleName: context.getHandler().name,
+      }),
     );
-
-    // this.logger.debug(`user: ${request.user?.userId}, ${request.user?.username}`);
 
     const now = Date.now();
 
     return next.handle().pipe(
       tap((res) => {
+        // res 是最终返回的数据实体。不包含状态码，
         this.logger.debug(
-          `${method} ${path} ${ip} ${userAgent}: ${response.statusCode}: ${Date.now() - now}ms`,
+          getJsonLog({
+            '[RES:BFF]': '',
+            XHeaderId,
+            method,
+            path,
+            params,
+            body,
+            ip,
+            userAgent,
+            statusCode: response.statusCode,
+            time: `${Date.now() - now}ms`,
+            Response: res,
+          }),
         );
-        this.logger.debug(`Response: ${JSON.stringify(res)}`);
       }),
     );
   }

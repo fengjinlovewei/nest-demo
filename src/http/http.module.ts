@@ -1,7 +1,7 @@
-import { Module, Global } from '@nestjs/common';
+import { Module, Global, Logger } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import Axios from 'axios';
 
+import { AxiosInit } from './axios.config';
 import { HttpService } from './http.service';
 
 @Global()
@@ -9,17 +9,23 @@ import { HttpService } from './http.service';
   providers: [
     HttpService,
     {
-      provide: 'AXIOS',
+      provide: 'HTTP',
       async useFactory(configService: ConfigService) {
-        const timeout = configService.get('HTTP_TIMEOUT');
-        const baseURL = configService.get('HTTP_BASE_URL');
+        const logger = new Logger('httpModule');
+        const config = configService.get('http') as HttpConfig;
+        logger.debug(`httpConfig: ${JSON.stringify(config)}`);
 
-        const axios = Axios.create({
-          timeout,
+        const { baseURL, timeout } = config;
+
+        const http = new AxiosInit();
+
+        const axiosJson = http.init({
           baseURL,
+          timeout,
+          contentType: 'application/json;charset=UTF-8',
         });
 
-        return axios;
+        return axiosJson;
       },
       inject: [ConfigService],
     },

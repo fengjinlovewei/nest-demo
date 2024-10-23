@@ -1,0 +1,17 @@
+# 服务配置
+server:
+  host: 'localhost'
+  port: 8020
+
+# redis配置
+redis:
+  host: '127.0.0.1'
+  port: 6379
+  username: 'default'
+  password: 522123
+  db: 0
+
+# 向外发起的http请求配置
+http:
+  baseURL: ''
+  timeout: 5000

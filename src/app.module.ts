@@ -8,10 +8,10 @@ import { UserModule } from './user/user.module';
 import * as winston from 'winston';
 import { WinstonLogger, WinstonModule, utilities } from 'nest-winston';
 
-//import { HttpModule } from '@nestjs/axios';
-
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { HttpModule } from './http/http.module';
+
+import { getConfig } from 'src/config';
 
 @Module({
   imports: [
@@ -20,22 +20,14 @@ import { HttpModule } from './http/http.module';
     SessionModule,
     UserModule,
     ConfigModule.forRoot({
+      ignoreEnvFile: false,
       isGlobal: true,
-      envFilePath: 'src/.env',
+      load: [getConfig],
+      // envFilePath: 'src/.env',
     }),
-    // HttpModule.registerAsync({
-    //   imports: [ConfigModule],
-    //   useFactory: async (configService: ConfigService) => {
-    //     return {
-    //       timeout: configService.get('HTTP_TIMEOUT'),
-    //       baseURL: configService.get('HTTP_BASE_URL'),
-    //       // maxRedirects: configService.get('HTTP_MAX_REDIRECTS'),
-    //     };
-    //   },
-    //   inject: [ConfigService],
-    // }),
     WinstonModule.forRootAsync({
       useFactory: (configService: ConfigService) => {
+        // console.log('111', configService.get('rides'));
         return {
           level: 'debug',
           transports: [

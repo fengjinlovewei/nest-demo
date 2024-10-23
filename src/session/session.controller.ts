@@ -1,4 +1,12 @@
-import { Controller, Post, Get, Body, Param, Logger } from '@nestjs/common';
+import {
+  Controller,
+  Post,
+  Get,
+  Body,
+  Param,
+  Logger,
+  Req,
+} from '@nestjs/common';
 import { SessionService } from './session.service';
 import { CityDto } from './dto/city.dto';
 
@@ -7,8 +15,7 @@ export class SessionController {
   constructor(private readonly SessionService: SessionService) {}
 
   @Get(':city')
-  weather(@Param('city') city: string) {
-    console.log(city);
-    return this.SessionService.weather(city);
+  weather(@Req() req: Request, @Param('city') city: string) {
+    return this.SessionService.weather(city, req.XHeaderId);
   }
 }

@@ -10,12 +10,12 @@ export class SessionService {
   @Inject(HttpService)
   private httpService: HttpService;
 
-  async weather(city: string) {
-    this.logger.log('city', city);
-
-    const { data } = await this.httpService.get(
-      `https://jsonplaceholder.typicode.com/posts`,
-    );
+  async weather(city: string, XHeaderId: string) {
+    const { data } = await this.httpService.get({
+      url: `https://jsonplaceholder.typicode.com/posts`,
+      XHeaderId,
+      params: { dd: '11', fff: '222' },
+    });
     return data;
   }
 }

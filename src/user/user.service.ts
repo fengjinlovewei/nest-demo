@@ -1,4 +1,9 @@
-import { BadRequestException, Inject, Injectable } from '@nestjs/common';
+import {
+  BadRequestException,
+  Inject,
+  Injectable,
+  Logger,
+} from '@nestjs/common';
 import { RegisterUserDto } from './dto/register-user.dto';
 import { User } from './entities/user.entity';
 
@@ -13,16 +18,23 @@ export class UserService {
   @Inject(SessionService)
   private sessionService: SessionService;
 
+  private readonly logger = new Logger(UserService.name);
+
   async register(registerUserDto: RegisterUserDto) {
     const { username, password } = registerUserDto;
 
-    console.log(typeof password);
+    this.logger.log(JSON.stringify({ ...registerUserDto }));
+
     const notes = await this.redisService.hashGet(username);
 
     return notes;
   }
 
-  async weather(city: string) {
-    return await this.sessionService.weather(city);
+  async header(data) {
+    return { name: 'fdy' };
+  }
+
+  async weather(city: string, XHeaderId: string) {
+    return await this.sessionService.weather(city, XHeaderId);
   }
 }

@@ -1,11 +1,12 @@
-import {
+import { Injectable } from '@nestjs/common';
+import { map } from 'rxjs';
+
+import type {
   CallHandler,
   ExecutionContext,
-  Injectable,
   NestInterceptor,
 } from '@nestjs/common';
-import { Response } from 'express';
-import { map, Observable } from 'rxjs';
+import type { Observable } from 'rxjs';
 
 @Injectable()
 export class FormatResponseInterceptor implements NestInterceptor {

@@ -1,9 +1,11 @@
-import { Global, Module } from '@nestjs/common';
+import { Global, Module, Logger, LoggerService } from '@nestjs/common';
 import Redis from 'ioredis';
 
 import { ConfigService } from '@nestjs/config';
 
 import { RedisService } from './redis.service';
+
+import { WinstonLogger, WinstonModule, utilities } from 'nest-winston';
 
 @Global()
 @Module({
@@ -12,19 +14,12 @@ import { RedisService } from './redis.service';
     {
       provide: 'REDIS',
       async useFactory(configService: ConfigService) {
-        const port = configService.get('redis_server_port');
-        const host = configService.get('redis_server_host');
-        const username = configService.get('redis_server_username');
-        const password = configService.get('redis_server_password');
-        const db = configService.get('redis_server_db');
+        const logger = new Logger('redisModule');
+        const config = configService.get('redis') as RedisConfig;
 
-        const redis = new Redis({
-          port,
-          host,
-          username,
-          password,
-          db,
-        });
+        logger.debug(`redisConfig: ${JSON.stringify(config)}`);
+
+        const redis = new (class {})(); //Redis(config);
 
         return redis;
       },

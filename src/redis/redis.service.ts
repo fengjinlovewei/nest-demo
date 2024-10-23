@@ -9,16 +9,16 @@ export class RedisService {
   private redis: Redis;
 
   async hashGet(key: string) {
-    return await this.redis.hgetall(key);
+    return {}; // await this.redis.hgetall(key);
   }
 
-  async hashSet(key: string, obj: Record<string, any>, ttl?: number) {
-    for (let name in obj) {
-      await this.redis.hset(key, name, obj[name]);
-    }
+  // async hashSet(key: string, obj: Record<string, any>, ttl?: number) {
+  //   for (let name in obj) {
+  //     await this.redis.hset(key, name, obj[name]);
+  //   }
 
-    if (ttl) {
-      await this.redis.expire(key, ttl);
-    }
-  }
+  //   if (ttl) {
+  //     await this.redis.expire(key, ttl);
+  //   }
+  // }
 }
