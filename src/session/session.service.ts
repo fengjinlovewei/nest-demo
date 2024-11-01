@@ -10,10 +10,9 @@ export class SessionService {
   @Inject(HttpService)
   private httpService: HttpService;
 
-  async weather(city: string, XHeaderId: string) {
+  async weather(city: string) {
     const { data } = await this.httpService.get({
       url: `https://jsonplaceholder.typicode.com/posts`,
-      XHeaderId,
       params: { dd: '11', fff: '222' },
     });
     return data;

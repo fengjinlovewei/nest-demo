@@ -1,10 +1,16 @@
 import { Injectable, Inject, Logger } from '@nestjs/common';
-import { AxiosInstance } from 'axios';
+import { AxiosInstance, AxiosHeaders } from 'axios';
 
-interface getType {
+interface commonType {
   url: string;
-  params?: any;
-  XHeaderId: string;
+  headers?: AxiosHeaders;
+}
+interface getType extends commonType {
+  params?: Record<string, any>;
+}
+
+interface postType extends commonType {
+  data?: Record<string, any>;
 }
 
 @Injectable()
@@ -12,16 +18,22 @@ export class HttpService {
   private readonly logger = new Logger(HttpService.name);
 
   @Inject('HTTP')
-  private http: AxiosInstance;
+  private http: AxiosInstance
 
-  async get({ url, params, XHeaderId }: getType) {
+  async get({ url, params = {}, headers }: getType) {
     return this.http({
       method: 'GET',
       url,
-      headers: {
-        'x-header-id': XHeaderId,
-      },
       params,
+      headers
+    });
+  }
+  async post({ url, data = {}, headers }: postType) {
+    return this.http({
+      method: 'POST',
+      url,
+      data,
+      headers
     });
   }
 }

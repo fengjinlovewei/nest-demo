@@ -15,3 +15,11 @@ redis:
 http:
   baseURL: ''
   timeout: 5000
+
+# 日志打印配置
+winston:
+  level: 'debug'
+  dirname: 'log'
+  filename: '%DATE%.log'
+  datePattern: 'YYYY-MM-DD'
+  maxSize: '1M'

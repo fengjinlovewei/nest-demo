@@ -1,57 +1,74 @@
 import { Logger } from '@nestjs/common';
+import { Injectable, Inject, Scope } from '@nestjs/common';
 import Axios from 'axios';
+import { REQUEST } from '@nestjs/core';
 import { getJsonLog } from 'src/utils';
 
 import type { InternalAxiosRequestConfig, AxiosResponse } from 'axios';
 
-export class AxiosInit {
-  private readonly logger = new Logger(AxiosInit.name);
+@Injectable({ scope: Scope.REQUEST })
+export class AxiosService {
+  private readonly logger = new Logger(AxiosService.name);
+
+  @Inject(REQUEST)
+  private request: Request;
 
   constructor() {}
 
-  getLogStr = (title: string, config: InternalAxiosRequestConfig<any>) => {
-    const { method, url, headers, params, data } = config;
+  getLogStr = (
+    title: string,
+    config: InternalAxiosRequestConfig<any>,
+    other?: Record<string, any>,
+  ) => {
+    const { method, url, params, data } = config;
 
-    const XHeaderId = headers['x-header-id'];
+    const XTransactionID = this.request.XTransactionID;
 
-    return getJsonLog({ [title]: '', XHeaderId, method, url, params, data });
+    return getJsonLog({
+      [title]: '',
+      XTransactionID,
+      method,
+      url,
+      params,
+      body: data,
+      data: other,
+    });
   };
 
   reqSuccess = (config: InternalAxiosRequestConfig<any>) => {
-    this.logger.log(this.getLogStr('[REQ:SERVER] Success', config));
+    this.logger.log(this.getLogStr('[TO:SERVER] Success-1', config));
     return config;
   };
 
   reqError = (error: any) => {
-    this.logger.error(this.getLogStr('[REQ:SERVER] Error', error.config));
-    this.logger.error(`reqError - ${JSON.parse(error)}`);
+    this.logger.error(`[TO:SERVER] Error-1 ${JSON.parse(error)}`);
     return Promise.reject(error);
   };
 
   resSuccess = (res: AxiosResponse<any, any>) => {
     // debugger;
     const status = res.status;
-    this.logger.log(this.getLogStr('[RES:SERVER] Success', res.config));
-
     if ((status >= 200 && status < 300) || status === 304) {
       //   if (res.data.code !== 200) {
       //     this.logger.error(JSON.stringify(res.data));
 
       //     return Promise.reject(res);
       //   }
-      this.logger.log(`[RES:SERVER] Success - ${JSON.stringify(res.data)}`);
+      this.logger.log(
+        this.getLogStr('[FROM:SERVER] Success-2', res.config, res.data),
+      );
       return res;
     }
 
-    this.logger.error(`[RES:SERVER] Success - Error - ${JSON.stringify(res)}`);
+    this.logger.error(this.getLogStr('[FROM:SERVER] Error-2', res.config, res));
 
     return Promise.reject(res);
   };
 
   resError = (error: any) => {
-    this.logger.error(this.getLogStr('[RES:SERVER] Error', error.config));
-
-    this.logger.error('[RES:SERVER] Error', error);
+    this.logger.error(
+      this.getLogStr('[FROM:SERVER] Error-3', error.config, error),
+    );
 
     // const status = error.response.status;
     // if (status === 401 || status === 400) {

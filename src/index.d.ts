@@ -1,8 +1,12 @@
 import type { Request as req, Response as res } from 'express';
 
 declare global {
+  interface SessionInfo {
+    islogin: boolean;
+  }
+
   interface Request extends req {
-    XHeaderId: string;
+    XTransactionID: string;
   }
 
   interface Response extends res {}
@@ -26,6 +30,14 @@ declare global {
     password: string;
     //默认是0
     db: number;
+  }
+
+  interface WinstonConfig {
+    level: string;
+    dirname: string;
+    filename: string;
+    datePattern: string;
+    maxSize: string;
   }
 
   interface HttpConfig {

@@ -20,9 +20,9 @@ export class InvokeRecordInterceptor implements NestInterceptor {
     const request = context.switchToHttp().getRequest<Request>();
     const response = context.switchToHttp().getResponse<Response>();
 
-    const XHeaderId = uuid();
+    const XTransactionID = uuid();
 
-    request.XHeaderId = XHeaderId;
+    request.XTransactionID = XTransactionID;
 
     const userAgent = request.headers['user-agent'];
 
@@ -31,7 +31,7 @@ export class InvokeRecordInterceptor implements NestInterceptor {
     this.logger.debug(
       getJsonLog({
         '[REQ:BFF]': '',
-        XHeaderId,
+        XTransactionID,
         method,
         path,
         params,
@@ -51,7 +51,7 @@ export class InvokeRecordInterceptor implements NestInterceptor {
         this.logger.debug(
           getJsonLog({
             '[RES:BFF]': '',
-            XHeaderId,
+            XTransactionID,
             method,
             path,
             params,

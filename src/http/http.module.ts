@@ -1,33 +1,38 @@
 import { Module, Global, Logger } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 
-import { AxiosInit } from './axios.config';
 import { HttpService } from './http.service';
+
+import { AxiosModule} from 'src/axios/axios.module';
+import { AxiosService} from 'src/axios/axios.service';
 
 @Global()
 @Module({
+  imports: [AxiosModule],
   providers: [
     HttpService,
     {
       provide: 'HTTP',
-      async useFactory(configService: ConfigService) {
-        const logger = new Logger('httpModule');
+      async useFactory(configService: ConfigService, axiosService: AxiosService) {
+        const logger = new Logger('HttpConfig');
         const config = configService.get('http') as HttpConfig;
-        logger.debug(`httpConfig: ${JSON.stringify(config)}`);
+        logger.debug(`${JSON.stringify(config)}`);
 
         const { baseURL, timeout } = config;
 
-        const http = new AxiosInit();
-
-        const axiosJson = http.init({
+        return axiosService.init({
           baseURL,
           timeout,
           contentType: 'application/json;charset=UTF-8',
         });
 
-        return axiosJson;
+        // const xform = axiosService.init({
+        //   baseURL,
+        //   timeout,
+        //   contentType: 'application/x-www-form-urlencoded;charset=UTF-8',
+        // });
       },
-      inject: [ConfigService],
+      inject: [ConfigService, AxiosService],
     },
   ],
   exports: [HttpService],

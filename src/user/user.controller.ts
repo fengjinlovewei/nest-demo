@@ -7,6 +7,7 @@ import {
   Logger,
   Req,
   Res,
+  Session,
 } from '@nestjs/common';
 
 import { UserService } from './user.service';
@@ -26,7 +27,7 @@ export class UserController {
   @Get('header')
   header(@Req() req: Request, @Res({ passthrough: true }) res: Response) {
     // console.log(req.headers);
-    // console.log(req.XHeaderId);
+    // console.log(req.XTransactionID);
     // console.log(req.cookies);
     res.header('x-test-header', '5173');
 
@@ -35,6 +36,18 @@ export class UserController {
 
   @Get('weather/:city')
   weather(@Req() req: Request, @Param('city') city: string) {
-    return this.userService.weather(city, req.XHeaderId);
+    return this.userService.weather(city);
+  }
+
+  @Get('login')
+  login(@Session() session: SessionInfo) {
+    session.islogin = true;
+    return { islogin: 'ok' };
+  }
+
+  @Get('getSession')
+  getSession(@Session() session: SessionInfo) {
+    const islogin = session.islogin;
+    return { islogin };
   }
 }

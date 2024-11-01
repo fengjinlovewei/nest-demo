@@ -34,7 +34,7 @@ export class UserService {
     return { name: 'fdy' };
   }
 
-  async weather(city: string, XHeaderId: string) {
-    return await this.sessionService.weather(city, XHeaderId);
+  async weather(city: string) {
+    return await this.sessionService.weather(city);
   }
 }

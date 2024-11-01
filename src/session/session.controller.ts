@@ -16,6 +16,6 @@ export class SessionController {
 
   @Get(':city')
   weather(@Req() req: Request, @Param('city') city: string) {
-    return this.SessionService.weather(city, req.XHeaderId);
+    return this.SessionService.weather(city);
   }
 }

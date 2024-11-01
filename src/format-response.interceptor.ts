@@ -6,17 +6,19 @@ import type {
   ExecutionContext,
   NestInterceptor,
 } from '@nestjs/common';
+
 import type { Observable } from 'rxjs';
 
 @Injectable()
 export class FormatResponseInterceptor implements NestInterceptor {
   intercept(context: ExecutionContext, next: CallHandler): Observable<any> {
     const response = context.switchToHttp().getResponse<Response>();
+    debugger
 
     return next.handle().pipe(
       map((data) => {
         return {
-          code: response.statusCode,
+          statusCode: response.statusCode,
           message: 'success',
           data,
         };

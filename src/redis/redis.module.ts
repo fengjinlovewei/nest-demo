@@ -14,10 +14,10 @@ import { WinstonLogger, WinstonModule, utilities } from 'nest-winston';
     {
       provide: 'REDIS',
       async useFactory(configService: ConfigService) {
-        const logger = new Logger('redisModule');
+        const logger = new Logger('RedisConfig');
         const config = configService.get('redis') as RedisConfig;
 
-        logger.debug(`redisConfig: ${JSON.stringify(config)}`);
+        logger.debug(`${JSON.stringify(config)}`);
 
         const redis = new (class {})(); //Redis(config);
 
