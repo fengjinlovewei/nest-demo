@@ -8,8 +8,6 @@ import * as cookieParser from 'cookie-parser';
 import * as session from 'express-session';
 
 import { AppModule } from './app.module';
-import { FormatResponseInterceptor } from './format-response.interceptor';
-import { InvokeRecordInterceptor } from './invoke-record.interceptor';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
@@ -25,10 +23,6 @@ async function bootstrap() {
   app.use(cookieParser());
 
   app.useGlobalPipes(new ValidationPipe({ transform: true }));
-  app.useGlobalInterceptors(new FormatResponseInterceptor());
-  app.useGlobalInterceptors(new InvokeRecordInterceptor());
-
-  
 
   const configService = app.get(ConfigService);
   const logger = new Logger(bootstrap.name);

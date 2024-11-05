@@ -23,6 +23,11 @@ import { HttpModule } from './http/http.module';
 import { getConfig } from 'src/config';
 import { AxiosModule } from './axios/axios.module';
 
+import { APP_INTERCEPTOR } from '@nestjs/core';
+
+import { InvokeRecordInterceptor } from './invoke-record.interceptor';
+import { FormatResponseInterceptor } from './format-response.interceptor';
+
 import 'winston-daily-rotate-file';
 
 @Module({
@@ -80,9 +85,18 @@ import 'winston-daily-rotate-file';
     AxiosModule,
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [
+    AppService,
+    {
+      provide: APP_INTERCEPTOR,
+      useClass: InvokeRecordInterceptor,
+    },
+    {
+      provide: APP_INTERCEPTOR,
+      useClass: FormatResponseInterceptor,
+    },
+  ],
 })
-
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
     consumer.apply(FilterMiddleware).forRoutes('*');

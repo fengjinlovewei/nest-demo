@@ -13,7 +13,6 @@ import type { Observable } from 'rxjs';
 export class FormatResponseInterceptor implements NestInterceptor {
   intercept(context: ExecutionContext, next: CallHandler): Observable<any> {
     const response = context.switchToHttp().getResponse<Response>();
-    debugger
 
     return next.handle().pipe(
       map((data) => {
