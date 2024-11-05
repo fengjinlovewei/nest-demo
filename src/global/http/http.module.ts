@@ -3,8 +3,8 @@ import { ConfigService } from '@nestjs/config';
 
 import { HttpService } from './http.service';
 
-import { AxiosModule} from 'src/axios/axios.module';
-import { AxiosService} from 'src/axios/axios.service';
+import { AxiosModule } from 'src/global/axios/axios.module';
+import { AxiosService } from 'src/global/axios/axios.service';
 
 @Global()
 @Module({
@@ -13,7 +13,10 @@ import { AxiosService} from 'src/axios/axios.service';
     HttpService,
     {
       provide: 'HTTP',
-      async useFactory(configService: ConfigService, axiosService: AxiosService) {
+      async useFactory(
+        configService: ConfigService,
+        axiosService: AxiosService,
+      ) {
         const logger = new Logger('HttpConfig');
         const config = configService.get('http') as HttpConfig;
         logger.debug(`${JSON.stringify(config)}`);

@@ -1,7 +1,7 @@
 import { Injectable, Inject, Logger } from '@nestjs/common';
 import { CityDto } from './dto/city.dto';
 
-import { HttpService } from 'src/http/http.service';
+import { HttpService } from 'src/global/http/http.service';
 
 @Injectable()
 export class SessionService {

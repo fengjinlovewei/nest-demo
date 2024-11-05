@@ -7,7 +7,7 @@ import {
 } from '@nestjs/common';
 import { Observable, tap } from 'rxjs';
 
-import { uuid, getJsonLog } from './utils';
+import { uuid, getJsonLog } from 'src/utils';
 
 @Injectable()
 export class InvokeRecordInterceptor implements NestInterceptor {

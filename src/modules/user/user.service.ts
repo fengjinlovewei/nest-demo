@@ -7,8 +7,8 @@ import {
 import { RegisterUserDto } from './dto/register-user.dto';
 import { User } from './entities/user.entity';
 
-import { RedisService } from 'src/redis/redis.service';
-import { SessionService } from 'src/session/session.service';
+import { RedisService } from 'src/global/redis/redis.service';
+import { SessionService } from 'src/modules/session/session.service';
 
 @Injectable()
 export class UserService {

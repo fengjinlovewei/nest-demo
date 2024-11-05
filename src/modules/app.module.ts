@@ -7,26 +7,26 @@ import {
 } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { RedisModule } from './redis/redis.module';
+
+import { RedisModule } from 'src/global/redis/redis.module';
+import { HttpModule } from 'src/global/http/http.module';
 import { SessionModule } from './session/session.module';
 import { UserModule } from './user/user.module';
 
-import { FilterMiddleware } from './filter.middleware';
-import { LoginMiddleware } from './login.middleware';
+import { FilterMiddleware } from 'src/middleware/filter';
+import { LoginMiddleware } from 'src/middleware/login';
 
 import * as winston from 'winston';
 import { WinstonLogger, WinstonModule, utilities } from 'nest-winston';
 
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { HttpModule } from './http/http.module';
 
 import { getConfig } from 'src/config';
-import { AxiosModule } from './axios/axios.module';
 
 import { APP_INTERCEPTOR } from '@nestjs/core';
 
-import { InvokeRecordInterceptor } from './invoke-record.interceptor';
-import { FormatResponseInterceptor } from './format-response.interceptor';
+import { InvokeRecordInterceptor } from 'src/interceptor/invoke-record';
+import { FormatResponseInterceptor } from 'src/interceptor/format-response';
 
 import 'winston-daily-rotate-file';
 
@@ -82,7 +82,6 @@ import 'winston-daily-rotate-file';
       },
       inject: [ConfigService],
     }),
-    AxiosModule,
   ],
   controllers: [AppController],
   providers: [
