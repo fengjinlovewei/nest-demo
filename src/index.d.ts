@@ -38,6 +38,7 @@ declare global {
     filename: string;
     datePattern: string;
     maxSize: string;
+    maxFiles: string;
   }
 
   interface HttpConfig {

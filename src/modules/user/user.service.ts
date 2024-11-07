@@ -8,6 +8,7 @@ import { RegisterUserDto } from './dto/register-user.dto';
 import { User } from './entities/user.entity';
 
 import { RedisService } from 'src/global/redis/redis.service';
+import { LoggerService } from 'src/global/logger/logger.service';
 import { SessionService } from 'src/modules/session/session.service';
 
 @Injectable()
@@ -18,7 +19,8 @@ export class UserService {
   @Inject(SessionService)
   private sessionService: SessionService;
 
-  private readonly logger = new Logger(UserService.name);
+  @Inject(LoggerService)
+  private logger: LoggerService;
 
   async register(registerUserDto: RegisterUserDto) {
     const { username, password } = registerUserDto;

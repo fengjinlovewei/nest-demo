@@ -5,7 +5,7 @@ server:
 
 # redis配置
 redis:
-  host: '127.0.0.1'
+  host: '192.168.133.181'
   port: 6379
   username: 'default'
   password: 522123
@@ -19,7 +19,8 @@ http:
 # 日志打印配置
 winston:
   level: 'debug'
-  dirname: 'log'
+  dirname: 'logs'
   filename: '%DATE%.log'
   datePattern: 'YYYY-MM-DD'
-  maxSize: '1M'
+  maxSize: '10M'
+  maxFiles: '14d'

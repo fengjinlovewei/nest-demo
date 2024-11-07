@@ -5,8 +5,6 @@ import { ConfigService } from '@nestjs/config';
 
 import { RedisService } from './redis.service';
 
-import { WinstonLogger, WinstonModule, utilities } from 'nest-winston';
-
 @Global()
 @Module({
   providers: [
@@ -19,7 +17,7 @@ import { WinstonLogger, WinstonModule, utilities } from 'nest-winston';
 
         logger.debug(`${JSON.stringify(config)}`);
 
-        const redis = new (class {})(); //Redis(config);
+        const redis = new Redis(config);
 
         return redis;
       },

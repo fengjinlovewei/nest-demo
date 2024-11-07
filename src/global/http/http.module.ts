@@ -5,6 +5,7 @@ import { HttpService } from './http.service';
 
 import { AxiosModule } from 'src/global/axios/axios.module';
 import { AxiosService } from 'src/global/axios/axios.service';
+import { LoggerService } from 'src/global/logger/logger.service';
 
 @Global()
 @Module({
@@ -16,10 +17,10 @@ import { AxiosService } from 'src/global/axios/axios.service';
       async useFactory(
         configService: ConfigService,
         axiosService: AxiosService,
+        loggerService: LoggerService,
       ) {
-        const logger = new Logger('HttpConfig');
         const config = configService.get('http') as HttpConfig;
-        logger.debug(`${JSON.stringify(config)}`);
+        loggerService.debug(`${JSON.stringify(config)}`);
 
         const { baseURL, timeout } = config;
 
@@ -35,7 +36,7 @@ import { AxiosService } from 'src/global/axios/axios.service';
         //   contentType: 'application/x-www-form-urlencoded;charset=UTF-8',
         // });
       },
-      inject: [ConfigService, AxiosService],
+      inject: [ConfigService, AxiosService, LoggerService],
     },
   ],
   exports: [HttpService],

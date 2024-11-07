@@ -9,7 +9,7 @@ export class RedisService {
   private redis: Redis;
 
   async hashGet(key: string) {
-    return {}; // await this.redis.hgetall(key);
+    return await this.redis.hgetall(key);
   }
 
   // async hashSet(key: string, obj: Record<string, any>, ttl?: number) {

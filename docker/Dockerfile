@@ -32,9 +32,9 @@ RUN npm install --production
 
 EXPOSE 8020
 
-# CMD ["node", "/app/main.js"]
-CMD /bin/bash ./docker/entrypoint.sh
+CMD ["node", "/app/main.js"]
+# CMD /bin/bash ./docker/entrypoint.sh
 
 # docker build . -f docker/Dockerfile -t fengjin/nest-demo
 
-# docker run -it --name nextdemo --network next-notes_my_network --network-alias nextdemo -p 8020:8020 -d fengjin/nest-demo
+# docker run -it --name nextdemo -p 8020:8020 -d fengjin/nest-demo

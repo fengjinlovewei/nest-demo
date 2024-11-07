@@ -2,16 +2,20 @@ import {
   CallHandler,
   ExecutionContext,
   Injectable,
-  Logger,
+  Scope,
   NestInterceptor,
+  Inject,
 } from '@nestjs/common';
 import { Observable, tap } from 'rxjs';
 
 import { uuid, getJsonLog } from 'src/utils';
 
-@Injectable()
+import { LoggerService } from 'src/global/logger/logger.service';
+
+@Injectable({ scope: Scope.REQUEST })
 export class InvokeRecordInterceptor implements NestInterceptor {
-  private readonly logger = new Logger(InvokeRecordInterceptor.name);
+  @Inject(LoggerService)
+  private logger: LoggerService;
 
   intercept(
     context: ExecutionContext,
@@ -31,9 +35,8 @@ export class InvokeRecordInterceptor implements NestInterceptor {
     this.logger.debug(
       getJsonLog({
         '[REQ:BFF]': '',
-        XTransactionID,
-        method,
-        path,
+        [method]: '',
+        [path]: '',
         params,
         body,
         ip,
@@ -51,9 +54,8 @@ export class InvokeRecordInterceptor implements NestInterceptor {
         this.logger.debug(
           getJsonLog({
             '[RES:BFF]': '',
-            XTransactionID,
-            method,
-            path,
+            [method]: '',
+            [path]: '',
             params,
             body,
             ip,

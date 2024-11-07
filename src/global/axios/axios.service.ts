@@ -1,4 +1,3 @@
-import { Logger } from '@nestjs/common';
 import { Injectable, Inject, Scope } from '@nestjs/common';
 import Axios from 'axios';
 import { REQUEST } from '@nestjs/core';
@@ -6,14 +5,15 @@ import { getJsonLog } from 'src/utils';
 
 import type { InternalAxiosRequestConfig, AxiosResponse } from 'axios';
 
+import { LoggerService } from 'src/global/logger/logger.service';
+
 @Injectable({ scope: Scope.REQUEST })
 export class AxiosService {
-  private readonly logger = new Logger(AxiosService.name);
-
   @Inject(REQUEST)
   private request: Request;
 
-  constructor() {}
+  @Inject(LoggerService)
+  private logger: LoggerService;
 
   getLogStr = (
     title: string,
@@ -22,13 +22,10 @@ export class AxiosService {
   ) => {
     const { method, url, params, data } = config;
 
-    const XTransactionID = this.request.XTransactionID;
-
     return getJsonLog({
       [title]: '',
-      XTransactionID,
-      method,
-      url,
+      [method]: '',
+      [url]: '',
       params,
       body: data,
       data: other,

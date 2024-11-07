@@ -10,6 +10,8 @@ import { AppService } from './app.service';
 
 import { RedisModule } from 'src/global/redis/redis.module';
 import { HttpModule } from 'src/global/http/http.module';
+import { LoggerModule } from 'src/global/logger/logger.module';
+
 import { SessionModule } from './session/session.module';
 import { UserModule } from './user/user.module';
 
@@ -28,8 +30,6 @@ import { APP_INTERCEPTOR } from '@nestjs/core';
 import { InvokeRecordInterceptor } from 'src/interceptor/invoke-record';
 import { FormatResponseInterceptor } from 'src/interceptor/format-response';
 
-import 'winston-daily-rotate-file';
-
 @Module({
   imports: [
     RedisModule,
@@ -42,46 +42,7 @@ import 'winston-daily-rotate-file';
       load: [getConfig],
       // envFilePath: 'src/.env',
     }),
-    WinstonModule.forRootAsync({
-      useFactory: (configService: ConfigService) => {
-        // console.log('111', configService.get('rides'));
-
-        const logger = new Logger('WinstonConfig');
-        const winstonConfig = configService.get('winston') as WinstonConfig;
-        logger.debug(`${JSON.stringify(winstonConfig)}`);
-
-        const { level, dirname, filename, datePattern, maxSize } =
-          winstonConfig;
-
-        return {
-          level: 'debug',
-          transports: [
-            // new winston.transports.File({
-            //   filename: `${process.cwd()}/log`,
-            // }),
-            new winston.transports.Console({
-              format: winston.format.combine(
-                winston.format.timestamp(),
-                utilities.format.nestLike(),
-              ),
-            }),
-            new winston.transports.DailyRotateFile({
-              level,
-              dirname,
-              filename,
-              datePattern,
-              maxSize,
-            }),
-            // new winston.transports.Http({
-            //   host: 'localhost',
-            //   port: 3002,
-            //   path: '/log'
-            // })
-          ],
-        };
-      },
-      inject: [ConfigService],
-    }),
+    LoggerModule,
   ],
   controllers: [AppController],
   providers: [
